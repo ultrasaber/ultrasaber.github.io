@@ -32,6 +32,14 @@ body > #container
     float: left;
 		font-weight:bold;
 		color:$text-color;
+		text-shadow: 0px 0px 20px #6496FF;
+
+		&:hover {
+	    transition-property:color text-shadow;
+      text-shadow: 0px 0px 30px #fff;
+      transition-duration:0.25s;
+      transition-timing-function: ease-out;	
+		}
 }
 
 .site-nav {
@@ -43,13 +51,27 @@ body > #container
     }
 
     .page-link {
-        color: $text-color;
+        color: $brand-color;
         line-height: $base-line-height;
+
+        transition-property:color text-shadow;
+        text-shadow:initial;
+        transition-duration:0.25s;
+        transition-timing-function: ease-out;
 
         // Gaps between nav items, but not on the last one
         &:not(:last-child) {
             margin-right: 20px;
         }
+
+				&:hover {
+					color:$text-color;
+
+					transition-property:color text-shadow;
+					text-shadow:0px 0px 4px #6496ff;
+					transition-duration:0.25s;
+					transition-timing-function: ease-out;
+				}
     }
 
     @include media-query($on-palm) {
