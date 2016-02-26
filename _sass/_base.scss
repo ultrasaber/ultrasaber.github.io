@@ -125,9 +125,10 @@ blockquote {
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey-color-light;
+    border: 1px solid #090909;
     border-radius: 3px;
-    background-color: #eef;
+    background-color: $dark-background-color;
+		font-family: $monospace-font;
 }
 
 code {

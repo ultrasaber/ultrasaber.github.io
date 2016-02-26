@@ -3,10 +3,12 @@
 ---
 @charset "utf-8";
 @import 'https://fonts.googleapis.com/css?family=Titillium+Web';
+@import 'https://fonts.googleapis.com/css?family=Ubuntu+Mono';
 
 
 // Our variables
 $base-font-family: "Titillium Web", Verdana, sans-serif;
+$monospace-font: "Ubuntu Mono", monospace;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
@@ -24,10 +26,10 @@ $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:    800px;
+$content-width:    100%;
 
 $on-palm:          600px;
-$on-laptop:        800px;
+$on-laptop:        100%;
 
 
 

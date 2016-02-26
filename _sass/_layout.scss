@@ -1,6 +1,13 @@
-body
+html, body, #container
+{
+	height:100%;
+}
+
+body > #container
 {
 	min-height:100%;
+	height:auto;
+	margin:0px;
 }
 
 /**
@@ -13,6 +20,7 @@ body
 		background-color: $dark-background-color;
     // Positioning context for the mobile navigation icon
     position: relative;
+		top:-5px;
 }
 
 .site-title {
@@ -103,10 +111,11 @@ body
     border-top: 1px solid $grey-color-dark;
     padding: $spacing-unit 0;
 		background-color: $dark-background-color;
-		position:absolute;
-		bottom:0px;
+		clear:both;
+		position:relative;
+		z-index:10;
 		height:150px;
-		width:100%;
+		margin-top:-150px;
 }
 
 .footer-heading {
@@ -176,6 +185,7 @@ body
  */
 .page-content {
     padding: $spacing-unit 0;
+		padding-bottom:150px;
 }
 
 .page-heading {
