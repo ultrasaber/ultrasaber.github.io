@@ -6,18 +6,22 @@ categories: dbms
 ---
 Here's a collection of SQL notes that I've put together just before midterms. I hope it beats sifting through hundreds of slides.
 
-##Lecture 1: Intro
+Lecture 1: Intro
+================
 
-#Data model:
+Data model:
+-----------
 
 * Structures and access techniques for a DBMS
 
-#DBMS:
+DBMS:
+-----
 
 * Became popular in the 70's/80's
 * Each model has adv. and dis.
 
-#3 primary data models:
+3 primary data models:
+----------------------
 
 * Hierachical
 * Network
@@ -32,11 +36,13 @@ Here's a collection of SQL notes that I've put together just before midterms. I 
 
 * Table: Rectangular object w/ rows and columns.
 
-#Rows:
+Rows:
+-----
 
 * A row has one data value or NULL for each column.
 
-#Columns:
+Columns:
+--------
 
 * Data in columns have the same datatype.
 * Columns are written as headings in output.
@@ -49,39 +55,44 @@ Here's a collection of SQL notes that I've put together just before midterms. I 
 * The order of the rows is not important.
 * Most relational DBMS' allow virtually unlimited rows (or, ~2 billion rows)
 
-#Columns:
-
 * Basic building blocks of a row
 * Attributes on a row define an entity
 * Can be simple, composite, stored, derived, or NULL
 
-#Simple attributes:
+Simple attributes:
+------------------
 
 * Are not divisible
 
-#Composite attributes:
+Composite attributes:
+---------------------
 
 * Are divisible
 
-#Stored attributes:
+Stored attributes:
+------------------
 
 * Manually entered/provided
 
-#Derived attributes:
+Derived attributes:
+-------------------
 
 * Derived from other attributes.
 
-#NULL:
+NULL:
+-----
 
 * It's literally nothing.
 * The value can be missing or not known.
 
-#Primary key:
+Primary key:
+------------
 
 * Attribute that identifies rows.
 * Composite primary keys are made up of multiple columns.
 
-#Requirements for primary keys:
+Requirements for primary keys:
+------------------------------
 
 * Cannot be NULL
 * Unique values per row
@@ -90,12 +101,14 @@ Here's a collection of SQL notes that I've put together just before midterms. I 
 * Character datatypes should be explicitly designed to be a primary key.
 * Names and descriptions are shitty primary keys.
 
-#Candidate primary key:
+Candidate primary key:
+----------------------
 
 * Attributes that CAN be used as a primary key.
 * Tables may only have one primary key.
 
-#Surrogate primary key:
+Surrogate primary key:
+----------------------
 
 * Column that is arbitrarily added to a table to be used as a primary key.
 * No meaning for the business; only used to store data.
@@ -108,48 +121,57 @@ Here's a collection of SQL notes that I've put together just before midterms. I 
 * Introduces more storage
 * May cause confusion
 
-#Relationships:
+Relationships:
+--------------
 
 * Tables rarely exist by themselves
 * Relationships are expressed as parents and children
 * Primary keys define the parent.
 * Specified when tables are created.
 
-#Foreign key:
+Foreign key:
+------------
 
 * Columns that correspond to the primary key column of a table.
 * Create the relationships.
 
-##Lecture 2: ERDs
+Lecture 2: ERDs
+===============
 
-#ERD:
+ERD:
+----
 
 * Shows how data is related
 * Quick review of database contents
 * Entities, attributes, relationships
 
-#Entity: 
+Entity:
+-------
 
 * A thing that exists independently.
 * Physical or conceptual.
 * Collection objects that have the same attributes.
 * Become tables.
 
-#Attributes:
+Attributes:
+-----------
 
 * Information that describes an entity.
 * Become columns.
 
-#Relationships: 
+Relationships: 
+--------------
 
 * How entities are related.
 * May or may not be specified when tables are built.
 
-#Creating ERDs
+Creating ERDs
+-------------
 
 * Visio: Crow's foot database notation
 
-#Cardinality: 
+Cardinality: 
+------------
 
 * How many are involved this relationship?
 
@@ -159,22 +181,26 @@ Here's a collection of SQL notes that I've put together just before midterms. I 
 
 * M2M relationships must be resolved to O2M relationships before the database is built.
 
-#Recursive relationships
+Recursive relationships
+-----------------------
 
 * A thing is related to itself.
 
-#N-ary relationships: 
+N-ary relationships: 
+--------------------
 
 * A relationship involving N entities.
 * Binary relationships are the most common.
 
-#3 types of ERD:
+3 types of ERD:
+---------------
 
 * Context: Entities and Relationships
 * Key-Based: Context + Keys and resolves M2M relationships
 * Full Attribute: Key-based + remaining attributes
 
-#Resolving M2M relationships:
+Resolving M2M relationships:
+----------------------------
 
 * Make a new entity.
 * PKs of the new entity are the PKs of the original entities.
@@ -182,12 +208,14 @@ Here's a collection of SQL notes that I've put together just before midterms. I 
 * Remove the original relationship.
 * You should have two O2M relationships with the new entity.
 
-##Lecture 3: Intro to SQL
+Lecture 3: Intro to SQL
+=======================
 
 * SQL: language used in relational databases.
 * Domain specific: not used for anything but interacting with the database.
 
-#SQL:
+SQL:
+----
 
 * Creates databases
 * Creates tables
@@ -208,12 +236,14 @@ Here's a collection of SQL notes that I've put together just before midterms. I 
 
 * Standard/vendor specific SQL
 
-#Vendor specific SQL:
+Vendor specific SQL:
+--------------------
 
 * Flexible
 * No code portability
 
-#2 types of SQL:
+2 types of SQL:
+---------------
 
 * Data Definition Language: Deals with database structure
 * Data Manipulation Language: Deals with data
@@ -227,7 +257,8 @@ Here's a collection of SQL notes that I've put together just before midterms. I 
 * DML: SELECT, DELETE, INSERT, UPDATE
 * Misc: GRANT, REVOKE
 
-#Naming objects
+Naming objects
+--------------
 
 * All objects require unique names
 * Names are typically specified in the ERD
@@ -238,7 +269,8 @@ Here's a collection of SQL notes that I've put together just before midterms. I 
 * Cannot be an SQL verb or clause.
 * Many DBMS' allow special characters, but avoid them for portablility
 
-##Lecture 4: Datatypes, Create tables, Constraints
+Lecture 4: Datatypes, Create tables, Constraints
+================================================
 
 * Datatypes define what can be used in SQL tables
 * ANSI dictates the datatypes that all DBMS' should provide
@@ -246,65 +278,78 @@ Here's a collection of SQL notes that I've put together just before midterms. I 
 * DBMS' implement datatypes differently, and may not work identically.
 * Oracle does not implement all standard datatypes.
 
-#CHAR(x): 
+CHAR(x): 
+--------
 
 * A sequence of characters of X(default 1, range 1-2000) length. 
 * Padded with spaces.
 
-#VARCHAR2(X): 
+VARCHAR2(X): 
+------------
+
 * A sequence of characters of X(range 1-4000) length. 
 * Not padded.
 
 * Both CHAR and VARCHAR2 may be assigned a shorter value than the maximum length.
 * A Data Truncation Error will occur if there is an attempt to place a larger value than the limit.
 
-#NUMBER:
+NUMBER:
+-------
 
 * All numbers in Oracle; integers, floats, fixed-points
 * Does not exist in the ANSI/ISO standard
 
-#NUMBER(P,S):
+NUMBER(P,S):
+------------
 
 * P = Precision: total digits in a number.
 * S = Scale: digits after the decimal point.
 
-#Integer:
+Integer:
+--------
 
 * A whole number.
 * Integers defined by NUMBER(X,0)
 
-#Decimal:
+Decimal:
+--------
 
 * Number of decimal positions is fixed and does not change
 * Defined by NUMBER(P,S)
 
-#Float: 
+Float: 
+------
 
 * a number where the decimal position can change
 * Defined by NUMBER
 
-#DATE/TIME:
+DATE/TIME:
+----------
 
 * Dates/timestamps.
 * Oracle only implements DATE.
 
-#TIMESTAMP: 
+TIMESTAMP: 
+----------
 
 * a seven-part value, as opposed to DATE's four-part value.
 
-#Symbolic constants
+Symbolic constants
+------------------
 
 * CURRENT_DATE
 * CURRENT_TIMESTAMP
 * USER: Currently logged-on user
 
-#Creating tables:
+Creating tables:
+----------------
 
 * DROP the tables first.
 * CREATE the tables.
 * ALTER them.
 
-#Constraints:
+Constraints:
+------------
 
 * Enforces integrity.
 * Rules that restrict values
@@ -312,7 +357,8 @@ Here's a collection of SQL notes that I've put together just before midterms. I 
 * In-line constraints: defined as the column is defined (NULL)
 * Out-of-Line constraints: defined separately (PK, UNIQUE, FK, CHECK)
 
-#Naming constraints
+Naming constraints
+------------------
 
 * Constraints must be named.
 * 30 character limit
@@ -322,13 +368,16 @@ Here's a collection of SQL notes that I've put together just before midterms. I 
 * Names are useful for handling errors or ALTERing.
 * System-generated names are cumbersome and in some cases dangerous to work with
 
-#ON DELETE clause
+ON DELETE clause
+----------------
 
 * ON DELETE CASCADE: deletes child rows associated with the parent row.
 * ON DELETE RESTRICT: the opposite. Not included in Oracle.
 * ON DELETE SET NULL: Sets child row foreign keys to NULL.
 
-#CREATE Syntax: 
+CREATE Syntax: 
+--------------
+
 {% highlight sql %}
 DROP TABLE *;
 
@@ -371,32 +420,38 @@ ALTER TABLE *
 
 * Drop tables in the reverse order that you create them!
 
-##Lecture 5: Simple Selects
+Lecture 5: Simple Selects
+=========================
 
-#SELECT: 
+SELECT: 
+-------
 
 * Retrieves data from tables.
 
-#Parts of the SELECT statement
+Parts of the SELECT statement
+-----------------------------
 
 * SELECT: Data items.
 * FROM: Tables to query.
 * WHERE: Conditions.
 * ORDER BY: Sorts results.
 
-#Order of execution:
+Order of execution:
+-------------------
 
 1. FROM
 2. WHERE
 3. SELECT
 4. ORDER BY
 
-#Temporary result set:
+Temporary result set:
+---------------------
 
 * available when clauses are run
 * Can be empty
 
-#SELECT column:
+SELECT column:
+--------------
 
 * all columns in a table
 * column names
@@ -405,7 +460,8 @@ ALTER TABLE *
 * Avoid the wildcard in production situations.
 * SELECT Column AS Name: renames columns.
 
-#WHERE:
+WHERE:
+------
 
 * can compare values, such as:
 
@@ -413,7 +469,8 @@ ALTER TABLE *
 * Expressions
 * Literals
 
-#WHERE conditions:
+WHERE conditions:
+-----------------
 
 * Comparison WHERE X = Y
 * Range WHERE X BETWEEN Y AND Z
@@ -423,26 +480,34 @@ ALTER TABLE *
 
 * Multiple conditions may be added with AND or OR.
 
-#Wildcards
+Wildcards
+---------
 
 * %: any string of characters
 * \_: one character
 
-#Literal DATEs
+Literal DATEs
+-------------
+
 * DATEs: should be in 'YYYY-MM-DD'.
 
-#ORDER BY X (ASC/DESC)
+ORDER BY X (ASC/DESC)
+---------------------
 
 * Can specify by column position/given name
 
-#SELECT DISTINCT column:
+SELECT DISTINCT column:
+-----------------------
 
 * removes duplicates from output
 
-#Regarding implicitly sorted data:
+Regarding implicitly sorted data:
+---------------------------------
+
 * Ensure data is sorted by ORDER BY, if specified. Don't rely on implicit stuff.
 
-#Regarding DATEs:
+Regarding DATEs:
+----------------
 
 * Dates are treated like strings AND numbers, but they are a different type altogether.
 * Dates have a time component (0-86399): seconds after midnight
@@ -450,7 +515,8 @@ ALTER TABLE *
 * To compare a date and a time, use the TO_DATE() function
 * TO_DATE(date, format-string)
 
-#DATE format strings:
+DATE format strings:
+--------------------
 
 * YYYY
 * MM
@@ -460,42 +526,50 @@ ALTER TABLE *
 * MI
 * SS
 
-#DATE built-in functions
+DATE built-in functions
+-----------------------
 
 * TRUNC(): truncates seconds from the date
 * EXTRACT(YEAR/MONTH/DAY FROM date): extracts individual parts of a date
 * ADD_MONTHS(date, x): add x months to date
 
-#Regarding math with DATEs
+Regarding math with DATEs
+-------------------------
 
 * Subtracting dates gives a number of days.
 
-#String built-in functions
+String built-in functions
+-------------------------
 
 * LOWER(): Convert column data to lowercase
 * UPPER(): Convert column data to uppercase.
 * SUBSTRING(col, position, length): Returns a substring.
 * Note: Characters are NOT zero-indexed!
 
-##Lecture 6: Joins
+Lecture 6: Joins
+================
 
-#Joins
+Joins
+-----
 
 * Form rows from two or more tables.
 * Equi-join: Exact match between two columns.
 * Joins are typically based on primary and foreign keys.
 * Without a WHERE clause, Cartesian Joins are produced.
 
-#When NOT to use a Join
+When NOT to use a Join
+----------------------
 
 * Joins are resource-intensive.
 * Never use a join when it isn't necessary.
 
-#Join standards: 
+Join standards: 
+---------------
 
 * Alphabetical order, PKs first
 
-#Execution:
+Execution:
+----------
 
 1. Get left row
 2. Get right row
@@ -511,12 +585,14 @@ ALTER TABLE *
 * Joins don't necessarily have to be between the PK and FK, nor does the condition have to be equal.
 
 
-#Aliases: 
+Aliases: 
+--------
 
 * Alternate names for tables.
 * FROM tablename Alias, anothertable Alias2
 
-#Inner and Outer Joins
+Inner and Outer Joins
+---------------------
 
 * Inner join: Children must have parents.
 * Outer join: the opposite.
@@ -525,14 +601,17 @@ ALTER TABLE *
 * Right outer: rows on the right will be joined to NULL
 * Full: rows on the left and right will be joined to NULL
 
-##Lecture 7: Summary Queries
+Lecture 7: Summary Queries
+==========================
 
-#Summary queries:
+Summary queries:
+----------------
 
 * Summarizes all data given.
 * NULL is ignored in summary queries.
 
-#Summary query functions:
+Summary query functions:
+------------------------
 
 * SUM()
 * AVG()
@@ -542,19 +621,23 @@ ALTER TABLE *
 
 * COUNT(\*): counts rows, not columns
 
-##Lecture 8: Summary Queries with GROUP BY
+Lecture 8: Summary Queries with GROUP BY
+========================================
 
-#GROUP BY:
+GROUP BY:
+---------
 
 * Returns data in a single summary row based on values for group criteria.
 * Multiple columns will produce groups for each combination.
 * Columns that are not summarized must be put into a GROUP BY.
 
-#HAVING:
+HAVING:
+-------
 
 * HAVING applies conditions after groups are created.
 
-#Execution:
+Execution:
+----------
 
 1. FROM
 2. WHERE
@@ -563,18 +646,22 @@ ALTER TABLE *
 5. SELECT
 6. ORDER BY
 
-#Regarding WHERE and HAVING
+Regarding WHERE and HAVING
+--------------------------
 
 * WHERE eliminates rows
 * HAVING eliminates groups
 
-#Regarding NULLs in GROUP BY clauses
+Regarding NULLs in GROUP BY clauses
+-----------------------------------
 
 * GROUP BY handles NULLs as their own value.
 
-##Lecture 9: Subqueries
+Lecture 9: Subqueries
+=====================
 
-#Subquery:
+Subquery:
+---------
 
 * Queries inside queries.
 * Subqueries are places in parenthesis.
@@ -584,14 +671,16 @@ ALTER TABLE *
 * Subqueries may have subqueries.
 * Subqueries may also be written as joins.
 
-#Correlated and Non-correlated subqueries
+Correlated and Non-correlated subqueries
+----------------------------------------
 
 * Non-correlated: Subquery only executes once. Takes longer to execute than queries without a subquery.
 * Correlated: Subquery is executed many times. Uses an Outer Reference.
 * IN tests a value against values in a set returned by a subquery.
 * EXISTS tests if a subquery returns any rows.
 
-# Queries, ordered by efficiency:
+Queries, ordered by efficiency:
+-------------------------------
 
 1. Simple select
 2. Non-correlated subquery
