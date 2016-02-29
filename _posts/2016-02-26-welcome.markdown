@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Welcome!"
+categories: news
+date: "2016-02-26 10:40:03 Central Standard Time"
+---
+I think I'm finally ready to push this blog forward. Markup and styles seems presentable enough, at least. Got some glowey stuff going on.
+
+Anyway, I'm @ultrasaber, and this is my blog. I'll be using it to document anything interesting found while I plow my way through college. Coding and network architecture are, sadly, a part of who I am; might as well express it in a productive way. And, just maybe, I'll help someone along the way.
+
+The site itself is pretty barebones, but I'll add plugins and stuff once I start writing enough things to warrant adding them. I'm toying with the idea of adding category archives, a search bar, and perhaps a 'related articles' sidebar.
+
+This isn't the last you're going to hear from me. It's going to be a fun ride.
