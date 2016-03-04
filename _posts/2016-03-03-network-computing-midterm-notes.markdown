@@ -1,0 +1,356 @@
+---
+layout: post
+title: "Network Computing Midterm Notes"
+date: "2016-03-03 19:21:42 Central Standard Time"
+---
+
+Know the OSI and TCP/IP model
+-----------------------------
+
+* Remember this: All People Seem To Need Data Processing.
+
+OSI model layers are as follows:
+
+1. Physical
+2. Data Link
+3. Network
+4. Transport
+5. Session
+6. Presentation
+7. Application
+
+TCP/IP model layers are as follows:
+
+1. Network Access (OSI layers 1+2)
+2. Internet (OSI Layer 3)
+3. Transport (OSI Layer 4)
+4. Application (OSI layers 5-7)
+
+For simplicity, layers will be referred to as their layer number (L1, L2, etc.)
+
+Addressing
+==========
+
+* Addressing is typically(!) used at L2 and L3.
+* L2 addressing is physical addressing, i.e. MAC addresses.
+* L3 addressing is logical addressing, i.e. IPv4/IPv6 addresses.
+
+* (!) My instructor implied that port numbers were a L4 address. I've never referred to ports as such, but if it crops up on the exam, well, there it is.
+
+Devices
+=======
+
+* Pretty sure they're going to ask which intermediary devices belongs to which layer, so...
+* Switches operate at L2. They forward stuff based on MAC address.
+* Routers operate at L3. They use logical addresses to transport packets between networks.
+* Hubs and wireless access points operate at L1.
+
+The PDU
+=======
+
+* It's a piece of data at any layer.
+* Succeeding layers encapsulate PDU from the previous layer.
+
+PDU names, organized by TCP/IP layer number:
+
+1. Frame (medium dependent)
+2. Packet
+3. Segment
+4. Data
+
+Protocols
+=========
+
+Common protocols, organized by TCP/IP layer number:
+
+1. PPP, Frame Relay, Ethernet
+2. IPv4, IPv6, ICMPv4, ICMPv6
+3. TCP, UDP
+4. HTTP, DNS, DHCP, FTP
+
+Key Terms
+=========
+
+Damn, this is broad. Refer to the flashcard stuff on Netacad for chapters 3-6, since they deal with layers.
+
+Or you can do all of the flashcards. They're not too bad.
+
+Chapter 3:
+
+* Encoding: modify data to a format to be transmitted
+* Decoding: modify transmitted data into usable data
+* Encapsulation: Putting messages into messages
+* De-encapsulation: Taking messages out of messages
+* Segmentation: Spliting data into smaller pieces for transmission
+* Unicast: Destined for a single host.
+* Multicast: Destined for a group of hosts.
+* Broadcast: Destined for all hosts.
+* Open Standard: Protocols that are available to the public at no cost.
+* Proprietary: Protocols that are developed by companies and are available to the public for purchase.
+* PDU: Protocol Data Unit. See above.
+* Default Gateway: Router that is responsible for redirecting packets to their destination.
+
+Chapter 4:
+
+* Bandwidth: The maximum rate that data can be carried over a medium.
+* Throughput: Actual amount of data that crosses a given point in a network over time.
+* Goodput: Usable data that crosses a point in a network over time.
+* EMI: Electromagnetic interference. When an electrmagnetic field affects other electromagnetic fields.
+* RFI: Radio frequency intereference. EMI that's in the radio frequency range.
+* Crosstalk: When signals on one wire affect signals on another wire.
+* Cancellation: Twisting wires to eliminate crosstalk.
+* Header: Information that is added before the data field in a frame.
+* Trailer: Information that is added after the data field in a frame.
+* Physical Topology: The actual connections and layout of devices in a network.
+* Logical Topology: The way that data travels through the network.
+* Contention-Based Access: Nodes compete to be able to use the network medium.
+* Controlled Access: Nodes have an orderly opportunity to access the medium.
+* FCS: Frame check sequence. Computed from frame contents and determines if the frame is damaged.
+* Full Duplex: Simultaneous sending and receiving.
+* Half Duplex: Non-simultaneous sending and receiving, i.e. one direction at a time.
+
+Chapter 5:
+
+* OUI: Organizationally Unique Identifier. 3-byte code that is assigned by IEEE to identify the vendor of a network interface card. It's the first part of your MAC address.
+* ARP: Address Resolution Protocol. Used to find a L2 address when an L3 address is known.
+* Auto-MDIX: Configures interfaces by detecting the type of cable. Eliminates the problem of straight-through vs. crossover.
+* Store and Forward: Switching method that receives an entire frame before forwarding.
+* Cut-through: Switching method that forwards as soon as possible, i.e. when a forwarding decision can be made.
+* Fast-forward: Forwards data as soon as a destination address has een received.
+* Fragment-free: Forwards data as soon as the first 64 bytes of a frame are eceived.
+
+Chapter 6:
+==========
+
+* Routing: The process of sending packets to hosts on a remote network.
+* MTU: The larget PDU that is supported.
+* TTL: Time to Live. A value that limits the lifetime of a packet.
+* Administrative Distance: The trustworthiness of a route.
+* Next-Hop: Destination router indicated by the outgoing interface in a routing table.
+* RAM: Random Access Memory. Volatile memory that stores `running-config` and tables generated by the device.
+* ROM: Read-only memory. Contains a limited IOS and instructions for the router.
+* NVRAM: Non-volatile RAM. Stores `startup-config`.
+* Hostname: A way to identify a networking device.
+* Flash: Non-volatile memory that stores the IOS image and system files.
+* Connectionless: A connection is not required to send data.
+* In-band Configuration: Requires the establishment of a network connection to configure the device.
+* Out-of-band Configuration: Requires a direct physical connection to configure the device.
+* Default Gateway: Allows devices on a network to communicate with other networks.
+* Metric: Used by a routing protocol to determine the best route to put in a routing table.
+
+Troubleshooting
+===============
+
+* In the context of the OSI model, troubleshooting is done in three ways:
+
+1. Top-down: L7 to L1
+2. Bottom-up: L1 to L7
+3. Divide-and-conquer: Lx to L1 or L7.
+
+* ...Yeah.
+
+The various tables and how to deal with them
+--------------------------------------------
+
+Routing table
+=============
+
+* Lists the ways to get to certain networks.
+* Will list information such as the destination network, the next router, administrative distance, metric, outgoing interface, and how the route was learned.
+
+ARP table
+=========
+
+* Lists IP addresses mapped to MAC addresses.
+
+Switch MAC address table
+========================
+
+* Lists which MAC addresses are associated with each switch port.
+
+Binary, Hex, and Decimal conversions
+------------------------------------
+
+* I can't teach you numbering systems, dude.
+* You also learned this last term.
+
+Tell time, too!
+===============
+
+* ???????????//
+
+Create and troubleshoot a small functioning network
+---------------------------------------------------
+
+PC firewall settings
+====================
+
+* Windows Firewall
+* Windows Firewall with Advanced Security
+
+* It's the reason why pings fail 90% of the time. Temporarily disable it when you're building a network.
+
+PC IPv4 settings
+================
+
+* Network and sharing center > change adapter settings > some interface > properties > ipv4 configuration
+
+PC interfaces
+=============
+
+* `ipconfig`? network adapter settings? Those will give you your interfaces, physical and virtual.
+
+Troubleshooting commands
+========================
+
+* `netstat -r`: Your routing table.
+* `ipconfig /all`: Everything you need to know about your network interfaces.
+* `arp -a`: Your ARP table.
+* `ping`: Test connectivity.
+* `tracert`: Trace the route to a certain host. Useful for narrowing down errors.
+
+Recognize and connect correct cables to correct interfaces
+----------------------------------------------------------
+
+* Square peg fits in square hole.
+* Auto-MDIX is our lord and saviour.
+
+Configure a Router
+------------------
+
+Establish initial console connection
+====================================
+
+* Plug in a console cable.
+* Throw up PuTTY/TeraTerm/whatever.
+
+Configure interfaces
+====================
+
+{% highlight ios %}
+line console 0
+	password killme
+	login
+line vty 0 15
+	password killme
+	login
+interface gi0/0
+	ip address 255.255.255.255 255.255.255.255
+	description Kill me.
+	no shutdown
+{% endhighlight %}
+
+Banners
+=======
+
+{% highlight ios %}
+banner motd +LALALALALALA I'm A BANNER LEL+
+{% endhighlight %}
+
+Password protect the router
+===========================
+
+* Refer to line configurations above as well.
+
+{% highlight ios %}
+enable password something
+enable secret somethingelse
+service password-encryption
+{% endhighlight %}
+
+Save configurations
+===================
+
+* `copy running-config startup-config`
+* or, if you're ballsy, `write memory`
+
+Troubleshooting
+===============
+
+* `show ip interface brief`: Shows info about interfaces.
+* `show ip route`: Displays the routing table.
+* `show running-config`: Shows the running configuration.
+* `show arp`: Shows the ARP table.
+* `show version`: Shows version information.
+* `traceroute`: Tests connectivity and shows the path.
+* `ping`: Tests connectivity.
+
+Configure a Switch
+------------------
+
+* Configuration commands for a router can often translate over to a switch.
+
+SVI configuration
+=================
+
+{% highlight ios %}
+interface vlan 1
+	ip address 255.255.255.255 255.255.255.255
+{% endhighlight %}
+
+Troubleshooting
+===============
+
+* `show mac-address table`: Shows the MAC address table.
+
+How is data encapsulated and de-encapsulated?
+---------------------------------------------
+
+* Computer messages are encapsulated in a specific format.
+* Each layer typically does this with PDUs.
+* Headers and trailers are added, with addressing and control information.
+* When a host receives the PDU, it strips away these headers to get the data within.
+
+What is the purpose of a switch?
+--------------------------------
+
+* A switch is an intermediary device that works at L2.
+* It uses MAC addresses to make forwarding decisions.
+
+What is the purpose of a router?
+--------------------------------
+
+* Routers are intermediary devices that work at L3.
+* For packets to travel to other networks, a router is required.
+
+Common UTP cables
+-----------------
+
+* Straight-through: Both ends or of the same standard (T568A or T568B).
+* Crossover: Both ends use different standards.
+* Rollover: Cisco proprietary. Use for console configuration.
+
+Bandwidth, Throughput, Goodput
+------------------------------
+
+* Bandwidth: The maximum rate that data can be carried over a medium.
+* Throughput: Actual amount of data that crosses a given point in a network over time.
+* Goodput: Usable data that crosses a point in a network over time.
+
+Addressing
+----------
+
+* Multicast: 224.0.0.0 - 239.255.255.255
+* Multicast on local network: 224.0.0.0 - 224.0.0.255
+
+* Directed broadcast: network broadcast address
+* limited broadcast: 255.255.255.255
+
+* Loopback: 127.0.0.0/8
+
+* Link-local: 169.254.0.0/16
+
+* Unicast: Literally anything else!
+
+* Default route: Route should go to 0.0.0.0/0.
+
+
+
+
+
+
+
+
+
+
+
