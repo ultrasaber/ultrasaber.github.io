@@ -320,6 +320,10 @@ Common UTP cables
 * Crossover: Both ends use different standards.
 * Rollover: Cisco proprietary. Use for console configuration.
 
+* Cat 3: Used for voice communication and phone lines
+* Cat 5/5e: Used for data transmission. Cat 5 supports 100Mb/s and 1000Mb/s (not recommended), Cat 5e supports 1000Mb/s.
+* Cat 6: Used for data transmission. Separates pairs for for speed. Supports 1000 Mb/s - 10 Gb/s (not recommended).
+
 Bandwidth, Throughput, Goodput
 ------------------------------
 
