@@ -348,6 +348,15 @@ Addressing
 
 * Default route: Route should go to 0.0.0.0/0.
 
+IPv6
+====
+
+* IPv6 multicast: ff00::/8
+* IPv6 loopback: ::1/128
+* IPv6 unspecified: ::/128
+* IPv6 unique local: fc00::/7 - fdff::/7
+* IPv6 link local: fe80::/10
+
 
 
 
