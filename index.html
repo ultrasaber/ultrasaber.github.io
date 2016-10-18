@@ -5,6 +5,11 @@ layout: default
 <div class="home">
 
   <ul class="post-list">
+
+		<form id="search">
+			<input type="text" id="searchForm" placeholder="Search blog archive..."></input>
+			<input type="image" id="searchButton" src="images/magnifying_glass-512.png"></input>
+		</form>
     {% for post in site.posts %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
