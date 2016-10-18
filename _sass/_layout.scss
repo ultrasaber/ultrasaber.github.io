@@ -311,8 +311,27 @@ body > #container
 	border-bottom:1px solid #444;
 }
 
-.post>hr
+hr
 {
 	border:1px solid #444;
 	margin-bottom:$spacing-unit;
 }
+
+
+#page-navigation
+{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	/* width:212px; */
+
+	& li
+	{
+		display:inline;
+		background-color:#111;
+		padding:10px;
+		border:1px solid #333;
+	}
+}
+
+

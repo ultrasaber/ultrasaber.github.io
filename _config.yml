@@ -15,3 +15,6 @@ github_username:  ultrasaber
 
 # Build settings
 markdown: kramdown
+
+gems: [jekyll-paginate]
+paginate: 5

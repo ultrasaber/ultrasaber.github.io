@@ -1,0 +1,24 @@
+---
+layout: page 
+title: Archive
+permalink: /archive/
+---
+
+<div class="home">
+
+  <ul class="archive-list">
+<!--
+		<form id="search">
+			<input type="text" id="searchForm" placeholder="Search blog archive..."></input>
+			<input type="image" id="searchButton" src="/images/magnifying_glass-512.png"></input>
+		</form>
+-->
+    {% for post in site.posts %}
+      <li>
+					<a href="{{ post.url | prepend: site.baseurl }}">
+						{{ post.date | date: "%b %-d, %Y" }} - {{ post.title }}
+					</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
