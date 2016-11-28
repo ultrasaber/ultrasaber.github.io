@@ -2,6 +2,14 @@
 
 /* Page sections */
 
+div.text div.spoiler
+{
+  border-color:#ccc;
+  border-width:1px 1px 1px 4px;
+  border-style:solid;
+  border-radius:0px 4px 4px 0px;
+}
+
 article#slide
 {
 	border-radius:0px 0px 15px 15px;
