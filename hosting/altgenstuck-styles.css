@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+
+/* Page sections */
+
+article#slide
+{
+	border-radius:0px 0px 15px 15px;
+}
+
+button
+{
+	font-family:"Source Sans Pro";
+	font-weight:700;
+	font-size:11px;
+	text-transform:uppercase;
+	background-color:#7289da;
+	border:0px solid #7289da;
+	padding:4px;
+	color:#fff;
+	border-radius:3px
+}
+
+div#main
+{
+	background-color:#1e2124;
+}
+
+body, #container2
+{
+	background-color:#2e3136;
+}
+
+#container1, #container3, #pagelist, #viewall
+{
+	background-color: #1e2124;
+}
+
+#main header nav a
+{
+	color:#fff !important;
+}
+
+/* Fonts */
+
+.text, #pagecommand, #nextlinks, #backlinks
+{
+	font-family:"Source Sans Pro", sans-serif;
+	font-weight:400;
+}
+
+#pagecommand
+{
+	font-family:"Source Sans Pro", sans-serif;
+	font-weight:700;
+	color:#4f545c;
+}
+
+.text
+{
+	font-weight:normal;
+	font-size: 15px;
+	color:#747f8d;
+}
+
+article.adventurepage
+{
+	background:#fff;
+}
+
+#adventureinfo, #favoriting, #suggestions, #pagelist, ul.adventurepagelist
+{;
+	font-family:"Source Sans Pro";
+	font-weight:400;
+	font-size:12px;
+	color:#f5f1df;
+}
+
+a
+{
+	text-decoration:none;
+	color:#2dbbf6 !important;
+}
+
+.slidelink
+{
+  font-weight:700;
+}
