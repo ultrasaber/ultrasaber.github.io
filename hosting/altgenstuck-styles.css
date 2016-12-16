@@ -2,6 +2,11 @@
 
 /* Page sections */
 
+#mspalogo
+{
+	background-image:url("http://ultrasaber.github.io/hosting/ags-logo.png");
+}
+
 div.text div.spoiler
 {
   border-color:#ccc;
