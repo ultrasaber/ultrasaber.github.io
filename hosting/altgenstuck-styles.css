@@ -2,7 +2,7 @@
 
 /* Page sections */
 
-#mspalogo
+#mspalogo, #mspalogo:hover
 {
 	background-image:url("http://ultrasaber.github.io/hosting/ags-logo.png");
 }
