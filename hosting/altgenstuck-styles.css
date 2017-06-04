@@ -11,12 +11,18 @@ body {
 	background-image:url("http://ultrasaber.github.io/hosting/ags-logo.png") !important;
 }
 
-div.text div.spoiler
+#content div.spoiler.open
 {
   border-color:#ccc;
   border-width:1px 1px 1px 4px;
   border-style:solid;
   border-radius:0px 4px 4px 0px;
+	background-color:#fff !important;
+}
+
+#content div.spoiler.open div
+{
+	background-color:#fff !important;
 }
 
 #slide
@@ -24,7 +30,7 @@ div.text div.spoiler
 	border-radius:0px 0px 15px 15px;
 }
 
-button
+button, input
 {
 	font-family:"Source Sans Pro";
 	font-weight:700;
@@ -32,7 +38,7 @@ button
 	text-transform:uppercase;
 	background-color:#7289da;
 	border:0px solid #7289da;
-	padding:4px;
+	padding:4px !important;
 	color:#fff;
 	border-radius:3px
 }
@@ -61,7 +67,7 @@ body, #container2, div.spoiler.open div:last-child
 
 /* Fonts */
 
-.text, #nextlinks, #backlinks
+.text, #nextlinks, #backlinks, #content
 {
 	font-family:"Source Sans Pro", sans-serif;
 	font-weight:400;
@@ -74,7 +80,7 @@ body, #container2, div.spoiler.open div:last-child
 	color:#4f545c;
 }
 
-.text
+.text, #content
 {
 	font-weight:normal;
 	font-size: 15px;
