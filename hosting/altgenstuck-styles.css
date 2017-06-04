@@ -2,9 +2,13 @@
 
 /* Page sections */
 
-#mspalogo, #mspalogo:hover
+body {
+	font-family:"Source Sans Pro", sans-serif !important;
+}
+
+#mspalogo, #mspalogo:hover, .mspfalogo
 {
-	background-image:url("http://ultrasaber.github.io/hosting/ags-logo.png");
+	background-image:url("http://ultrasaber.github.io/hosting/ags-logo.png") !important;
 }
 
 div.text div.spoiler
@@ -15,7 +19,7 @@ div.text div.spoiler
   border-radius:0px 4px 4px 0px;
 }
 
-article#slide
+#slide
 {
 	border-radius:0px 0px 15px 15px;
 }
@@ -38,14 +42,16 @@ div#main
 	background-color:#1e2124;
 }
 
-body, #container2
+body, #container2, div.spoiler.open div
 {
 	background-color:#2e3136;
+	padding:10px;
+	border-radius:4px;
 }
 
-#container1, #container3, #pagelist, #viewall
+#container1, #container3, #pagelist, #viewall, div.spoiler.open
 {
-	background-color: #1e2124;
+	background-color: #1e2124 !important;
 }
 
 #main header nav a
@@ -55,13 +61,13 @@ body, #container2
 
 /* Fonts */
 
-.text, #pagecommand, #nextlinks, #backlinks
+.text, #nextlinks, #backlinks
 {
 	font-family:"Source Sans Pro", sans-serif;
 	font-weight:400;
 }
 
-#pagecommand
+#pagecommand, #links a, #command span
 {
 	font-family:"Source Sans Pro", sans-serif;
 	font-weight:700;
@@ -75,12 +81,12 @@ body, #container2
 	color:#747f8d;
 }
 
-article.adventurepage
+article.adventurepage, #slide
 {
 	background:#fff;
 }
 
-#adventureinfo, #favoriting, #suggestions, #pagelist, ul.adventurepagelist
+#adventureinfo, #favoriting, #suggestions, #pagelist, ul.adventurepagelist, #info
 {;
 	font-family:"Source Sans Pro";
 	font-weight:400;
