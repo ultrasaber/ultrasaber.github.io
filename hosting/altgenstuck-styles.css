@@ -42,7 +42,7 @@ div#main
 	background-color:#1e2124;
 }
 
-body, #container2, div.spoiler.open div
+body, #container2, div.spoiler.open div:last-child
 {
 	background-color:#2e3136;
 	padding:10px;
