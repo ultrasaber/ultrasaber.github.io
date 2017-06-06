@@ -110,3 +110,15 @@ a
 {
   font-weight:700;
 }
+
+.alert {
+  color:#ff9800;
+	text-shadow:none;
+}
+
+.alert:before {
+	  content:"HAHA HOW THE FUCK DO I DEPLOY A WEBSITE";
+    background-color: #ff9800;
+    color: #ffffff;
+    text-shadow: 0px 1px 3px black;
+}
