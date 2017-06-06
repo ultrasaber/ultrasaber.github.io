@@ -11,7 +11,7 @@ body {
 	background-image:url("http://ultrasaber.github.io/hosting/ags-logo.png") !important;
 }
 
-#content div.spoiler.open
+#content div.spoiler.open, #content div.spoiler.closed
 {
   border-color:#ccc;
   border-width:1px 1px 1px 4px;
