@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+@import url('https://fonts.googleapis.com/css?family=Exo:800');
 
 /* Page sections */
 
@@ -13,10 +14,10 @@ body {
 
 #content div.spoiler.open, #content div.spoiler.closed
 {
-  border-color:#ccc;
-  border-width:1px 1px 1px 4px;
-  border-style:solid;
-  border-radius:0px 4px 4px 0px;
+	border-color:#ccc;
+	border-width:1px 1px 1px 4px;
+	border-style:solid;
+	border-radius:0px 4px 4px 0px;
 	background-color:#fff !important;
 }
 
@@ -108,17 +109,43 @@ a
 
 .slidelink
 {
-  font-weight:700;
+	font-weight:700;
 }
 
 .alert {
-  color:#ff9800;
+	color:#ff9800;
 	text-shadow:none;
 }
 
 .alert:before {
-	  content:"HAHA HOW THE FUCK DO I DEPLOY A WEBSITE";
+	content:"HAHA HOW THE FUCK DO I DEPLOY A WEBSITE";
     background-color: #ff9800;
     color: #ffffff;
     text-shadow: 0px 1px 3px black;
+}
+
+#p1 #content a
+{
+	color:#fff !important;
+	background-color: #7289da;
+	display:block;
+	margin:-16px -25px;
+	font-family:"Exo", sans-serif;
+	text-transform:uppercase;
+	font-size:2em;
+	padding:4px;
+}
+
+#p1 #content a:last-child
+{
+	margin-bottom: 25px;	
+}
+
+#infobox span.major 
+{
+	font-family:"Exo", sans-serif;
+	text-transform:uppercase;
+	text-shadow:none;
+	font-size:1em;
+	color:#fff;
 }
