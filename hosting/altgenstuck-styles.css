@@ -74,7 +74,50 @@ body, #container2, div.spoiler.open div:last-child
 	font-weight:400;
 }
 
-#pagecommand, #links a, #command span
+#links>span
+{
+	display:none;
+}
+
+#links a:before
+{
+  content:">";
+	font-weight:bold;
+	font-family:"Source Sans Pro", sans-serif;
+	display:inline-block;
+	width:25px;
+	text-align:center;
+	color:#99AAB5 !important;
+	padding:0px 6px 4px 6px;
+	float:left;
+}
+
+#links a
+{
+	font-family:"Source Sans Pro", sans-serif;
+	color:#99AAB5 !important;
+	border:solid #ccc;
+	display:block;	
+	border-radius: 4px;
+	border-width: 2px;
+	font-size:16px;
+	float:right;
+	width:100%;
+	margin-bottom:20px;
+	line-height:24px;
+
+}
+
+#links a:hover, #links a:hover:before
+{
+  transition-property: all;
+  transition-duration: 0.2s;
+	color:#fff !important;
+	border-color:#7289DA;
+	background-color:#7289DA;
+}
+
+#pagecommand, #command span
 {
 	font-family:"Source Sans Pro", sans-serif;
 	font-weight:700;
