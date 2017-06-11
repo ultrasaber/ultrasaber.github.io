@@ -5,6 +5,7 @@
 
 body {
 	font-family:"Source Sans Pro", sans-serif !important;
+	background-color:#1e2124;
 }
 
 #mspalogo, #mspalogo:hover, .mspfalogo
@@ -49,7 +50,7 @@ div#main
 	background-color:#1e2124;
 }
 
-body, #container2, div.spoiler.open div:last-child
+#container2, div.spoiler.open div:last-child
 {
 	background-color:#2e3136;
 	padding:10px;
