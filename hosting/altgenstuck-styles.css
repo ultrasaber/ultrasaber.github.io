@@ -193,3 +193,7 @@ a
 	font-size:1em;
 	color:#fff;
 }
+
+#content > span>embed {
+	margin: 0px -25px;
+}
