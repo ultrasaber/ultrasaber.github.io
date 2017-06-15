@@ -194,6 +194,8 @@ a
 	color:#fff;
 }
 
-#content > span>embed {
+#content>span>embed,
+#content canvas
+{
 	margin: 0px -25px;
 }
