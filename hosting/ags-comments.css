@@ -1,0 +1,54 @@
+.rate input[type="button"], 
+input.major[type="submit"],
+.rate input[type="button"]:disabled {
+  font-family:"Source Sans Pro";
+	font-weight:700;
+	font-size:11px;
+	text-transform:uppercase;
+	background-color:#23272A;
+	border:0px solid #7289da;
+	padding:5px !important;
+	color:#fff;
+	border-radius:3px;
+  width:50px;
+}
+
+.fav.major, #edit {
+	background-color:#7289DA;
+	border:0px solid #7289da !important;
+	padding:5px !important;
+	border-radius:4px !important;
+
+}
+
+.rate input.up.lit[type="button"] {
+  background-color:#7289DA;
+}
+
+input.major[type="submit"] {
+  margin: 0px auto;
+  background-color:#7289DA;
+}
+
+#newcomment textarea {
+  background-color:#23272A;
+  color:#fff;
+  font-family:"Source Sans Pro";
+  border:1px #222 solid;
+  border-radius:8px;
+  padding:10px;
+  margin: 10px 0px;
+}
+
+.spoiler.open select {
+  background-color:#23272A;
+  color:#fff;
+  font-family:"Source Sans Pro";
+  border:1px #222 solid;
+  border-radius:4px;
+  margin: 10px 0px;
+}
+
+.cellicon {
+  border-radius:50%;
+}
