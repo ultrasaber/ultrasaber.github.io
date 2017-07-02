@@ -14,7 +14,7 @@ input.major[type="submit"],
 }
 
 .fav.major, #edit {
-	background-color:#7289DA;
+	background-color:#7289DA !important;
 	border:0px solid #7289da !important;
 	padding:5px !important;
 	border-radius:4px !important;
