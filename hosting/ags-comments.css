@@ -58,6 +58,6 @@ input.major[type="submit"] {
 #bbtoolbar input {
     padding: 0px !important;
     background-color: #7289da;
-    border: 0px solid #7289da;
+    border: 1px solid #7289da;
     margin-right:1px;
 }
