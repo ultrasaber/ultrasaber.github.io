@@ -54,3 +54,10 @@ input.major[type="submit"] {
 .cellicon {
   border-radius:50%;
 }
+
+#bbtoolbar input {
+    padding: 0px !important;
+    background-color: #7289da;
+    border: 0px solid #7289da;
+    margin-right:1px;
+}
