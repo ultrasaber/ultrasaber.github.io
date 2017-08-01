@@ -168,7 +168,7 @@ a
     text-shadow: 0px 1px 3px black;
 }
 
-#p1 #content a
+.p1 #content a
 {
 	color:#fff !important;
 	background-color: #7289da;
@@ -180,7 +180,7 @@ a
 	padding:4px;
 }
 
-#p1 #content a:last-child
+.p1 #content a:last-child
 {
 	margin-bottom: 25px;	
 }
