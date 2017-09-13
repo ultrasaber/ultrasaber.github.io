@@ -23,9 +23,11 @@ input.major[type="submit"],
 
 }
 
-.rate input.up.lit[type="button"] {
+.rate input.up.lit[type="button"],
+.rate input.down.lit[type="button"] {
   background-color:#7289DA;
 }
+
 
 input.major[type="submit"] {
   margin: 0px auto;
