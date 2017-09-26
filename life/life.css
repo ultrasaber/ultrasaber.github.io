@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Share+Tech');
+
+body {
+  background-color:#222;
+  color:#eee;
+  font-family:"Share Tech", sans-serif;
+  width:922px;
+  margin:8px auto;
+}
+
+#board, #gameOptions {
+  background-color:#2a2a2a;
+  padding:12px;
+  border-radius:12px;
+  margin:0px auto;
+}
+
+#board td {
+  width:24px;
+  height:24px;
+  background-color: #333;
+  border-radius:50%;
+}
+
+#board td.dead {
+  background-color:#333;
+}
+
+#board td.alive {
+  background-color:#2D9AFF;
+}
+
+#board td.alive.evil {
+  background-color:#FF4949;
+}
+
+button {
+  background-color: #333;
+  color:#eee;
+  border:none;
+  padding:10px;
+  margin:6px 0px 6px 0px;
+  border-radius:4px;
+  font-family:"Share Tech", sans-serif;
+}
+
+p, ul {
+  margin:4px;
+}
+
+ul {
+  list-style: none;
+  padding-left:16px;
+}
+
+input[type=checkbox] {
+  visibility: hidden;
+}
+
+ul li {
+  font-size:1em;
+  margin: 12px 4px;
+  position: relative;
+  border-radius: 3px;
+  display:inline-block;
+}
+
+ul li label {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: -5px;
+  left: -3px;
+  background: #333;
+  color:#555;
+  text-align: center;
+}
+
+ul li input[type=checkbox]:checked + label {
+  background: #555;
+  color:#fff;
+}
+
+#evilLabel {
+  background-color: #2D9AFF;
+  color:#eee;
+  border:none;
+  padding:10px;
+  border-radius:4px;
+  font-family:"Share Tech", sans-serif;
+  font-size:13px;
+  cursor: pointer;
+}
+
+#evilCheckbox:checked + label {
+  background: #FF4949;
+  color:#fff;
+}

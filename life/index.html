@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="life.css"/>
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="life.js"></script>
+    <script type="text/javascript">
+      var life;
+
+      document.addEventListener("DOMContentLoaded", function () {
+        life = new Life(32,32,document.getElementById("board"),document.getElementById("evilCheckbox"));
+        life.constructHTML();
+
+        setInterval(function() {
+          if (life.isSimulating) {
+            life.tick();
+          }
+        }, 250);
+      });
+
+      function applyGameSettings(lifeObject) {
+        var newBirthSettings = [];
+        var newSurvivalSettings = [];
+
+        $("#birthCondition, #deathCondition").each(function(index, element) {
+          $("li>input", element).each(function(i, e) {
+            if (e.checked) {
+              if (element.id == "birthCondition") {
+                newBirthSettings.push(e.value);
+              } else {
+                newSurvivalSettings.push(e.value);
+              }
+            }
+          });
+        });
+
+        lifeObject.birthOn = newBirthSettings;
+        lifeObject.surviveOn = newSurvivalSettings;
+
+        console.log(lifeObject.birthOn);
+        console.log(lifeObject.surviveOn);
+      }
+      
+    </script>
+  </head>
+  <body>
+    <div id="board"></div>
+    <button onclick="life.clear();">Clear</button>
+    <button onclick="life.tick(document.getElementById('board'));">Next Tick</button>
+    <button onclick="life.isSimulating = !life.isSimulating;">Toggle Simulation</button>
+    <input id="evilCheckbox" type="checkbox"/><label for="evilCheckbox" id="evilLabel">Toggle Evil</label>
+    <div id="gameOptions">
+      <fieldset>
+        <legend>Game Options</legend>
+        <p>Neighbours required for cell birth:</p>
+        <ul id="birthCondition">
+          <li><input id="birth-0" value="0" type="checkbox" onchange="applyGameSettings(life);"/><label for="birth-0">0</label></li>
+          <li><input id="birth-1" value="1" type="checkbox" onchange="applyGameSettings(life);"/><label for="birth-1">1</label></li>
+          <li><input id="birth-2" value="2" type="checkbox" onchange="applyGameSettings(life);"/><label for="birth-2">2</label></li>
+          <li><input id="birth-3" value="3" type="checkbox" onchange="applyGameSettings(life);"/><label for="birth-3">3</label></li>
+          <li><input id="birth-4" value="4" type="checkbox" onchange="applyGameSettings(life);"/><label for="birth-4">4</label></li>
+          <li><input id="birth-5" value="5" type="checkbox" onchange="applyGameSettings(life);"/><label for="birth-5">5</label></li>
+          <li><input id="birth-6" value="6" type="checkbox" onchange="applyGameSettings(life);"/><label for="birth-6">6</label></li>
+          <li><input id="birth-7" value="7" type="checkbox" onchange="applyGameSettings(life);"/><label for="birth-7">7</label></li>
+          <li><input id="birth-8" value="8" type="checkbox" onchange="applyGameSettings(life);"/><label for="birth-8">8</label></li>
+        </ul>
+        <p>Neighbours required for cell survival:</p>
+        <ul id="deathCondition">
+          <li><input id="death-0" value="0" type="checkbox" onchange="applyGameSettings(life);"/><label for="death-0">0</label></li>
+          <li><input id="death-1" value="1" type="checkbox" onchange="applyGameSettings(life);"/><label for="death-1">1</label></li>
+          <li><input id="death-2" value="2" type="checkbox" onchange="applyGameSettings(life);"/><label for="death-2">2</label></li>
+          <li><input id="death-3" value="3" type="checkbox" onchange="applyGameSettings(life);"/><label for="death-3">3</label></li>
+          <li><input id="death-4" value="4" type="checkbox" onchange="applyGameSettings(life);"/><label for="death-4">4</label></li>
+          <li><input id="death-5" value="5" type="checkbox" onchange="applyGameSettings(life);"/><label for="death-5">5</label></li>
+          <li><input id="death-6" value="6" type="checkbox" onchange="applyGameSettings(life);"/><label for="death-6">6</label></li>
+          <li><input id="death-7" value="7" type="checkbox" onchange="applyGameSettings(life);"/><label for="death-7">7</label></li>
+          <li><input id="death-8" value="8" type="checkbox" onchange="applyGameSettings(life);"/><label for="death-8">8</label></li>
+        </ul>
+      </fieldset>
+    </div>
+  </body>
+</html>
