@@ -203,3 +203,7 @@ a
 div.um {
   background-image:url("https://ultrasaber.github.io/hosting/internet-advertising-should-rot.png") !important;
 }
+
+#links div:before {
+	display:none;
+}
