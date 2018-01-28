@@ -1,0 +1,41 @@
+#main nav:before {
+  content:"MSPFA Navigation";
+  text-transform:uppercase;
+  text-align:left;
+  display:block;
+  padding-left:10px;
+  font-size:1.1em;
+  margin:20px 0px 10px 0px;
+  color:#6C6F73;
+}
+
+#main nav {
+  position:fixed;
+  z-index:99999;
+  top:0px;
+  left:0px;
+  height:100%;
+  width:250px;
+  background-color:#23272A;
+  text-transform: lowercase;
+}
+
+#main nav .vbar,
+#main nav .heart {
+  display:none;
+}
+
+#main header nav a {
+  display:block;
+  text-align:left;
+  font-size:1.8em;
+  font-weight:normal;
+  font-family:"Source Sans Pro", sans-serif;
+  color:#4C4F53 !important;
+  margin-bottom: 8px;
+}
+
+#main nav a:before {
+  content:"#";
+  padding:0px 10px 0px 10px;
+}

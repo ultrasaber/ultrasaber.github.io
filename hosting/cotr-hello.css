@@ -1,0 +1,783 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+/***
+ 
+                   Hello Theme
+ 
+  by BMC WebDesign, 2010. http://css3.wikidot.com
+ 
+                      *****
+                      v1.2
+                      
+Original PSD template by Orman Clark of http://premiumpixels.com
+ 
+***/
+
+
+/*-------------------------------------------------------------
+   GLOBAL 
+---------------------------------------------------------------*/
+ 
+p {margin: 7px 0;line-height: 1.36em;}
+a {color: #2191d1;text-decoration: none;}
+a.newpage {color: #b30000;}
+a:hover {color: #222;background-color: transparent;}
+ 
+h1, h2, h3, h4, h5, h6 {
+    color: #222;
+    font-weight: normal;
+    font-family: 'Nunito Sans', Arial, sans-serif;
+    line-height: 1.2em;
+    margin: 16px 0;
+}
+h1 {font-size: 220%;}
+h2 {font-size: 180%; color: #444;}
+h3 {font-size: 170%;}
+h4 {font-size: 140%;}
+h5 {font-size: 120%; font-weight: bold;}
+h6 {font-size: 115%; font-weight: bold;}
+h2, .comments-box h1 {
+	background: url(http://themes.wdfiles.com/local--files/hello/hello-heading-bg.gif) repeat-x 0 bottom;
+	padding-bottom: 15px;	
+}
+h4 {
+	background: #fbfbfb url(http://themes.wdfiles.com/local--files/hello/hello-heading-bg.gif) repeat-x 0 center;
+	padding-left: 20px;	
+}
+h4 span {
+	background: #fbfbfb url(http://themes.wdfiles.com/local--files/hello/hello-body-bg.gif) repeat 0 0;
+	padding: 0 20px;
+	color: #2191d1;
+	
+}
+ 
+input[type=text], textarea {
+	margin: 0;
+    padding: 7px 5px;
+    background: #fff;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f5f5f5), to(#fff), color-stop(.2,#fff));
+    background-image: -moz-linear-gradient(top,#f5f5f5, #fff, #fff 60%);
+    border: 1px solid #ccc;
+}
+input[type=text]:focus, textarea:focus {
+	border: 1px solid #3198dd;
+	outline: none;
+}
+ 
+/*-------------------------------------------------------------
+   LAYOUT 
+---------------------------------------------------------------*/
+html {
+    background: #fbfbfb url(http://themes.wdfiles.com/local--files/hello/hello-body-bg.gif) repeat 0 0;
+}
+body {
+    color: #222;
+	background: url(http://themes.wdfiles.com/local--files/hello/hello-body-top-bg.gif) repeat-x;
+	font: 15px/1.3em "Nunito Sans", Arial, Helvetica, Geneva, sans-serif;
+}
+#container-wrap {
+    margin: 0 auto;
+    width: 960px; 
+}
+ 
+/*-------------------------------------------------------------
+   HEADER 
+---------------------------------------------------------------*/
+ 
+#header {
+    height: 200px;
+    position: relative;
+}
+#header h1 {
+    position: absolute;
+    top: 78px;
+}
+#header h1 a {
+    color: #3a3a3a;
+    font-size: 40px;
+    padding: 17px 0 0;
+    letter-spacing: -2px;
+	font-weight: bold;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+	-webkit-transition: color 140ms linear;
+	-moz-transition: color 140ms linear;
+	transition: color 140ms linear;
+}
+#header h1 a:hover {color: #2191d1;}
+#header h2 {
+    color: #aaa;
+    position: absolute;
+    top: 115px;
+    left: 0px;
+    background: none;
+	text-transform: uppercase;
+	font: 11px 'Nunito Sans', Arial, Helvetica, sans-serif;
+}
+
+/*----- LOGIN STATUS ------------------------------------------*/
+ 
+#login-status {
+    color: #bbb;
+    position: absolute;
+    top: 8px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.75);
+}
+#login-status .printuser a {
+    display: none;
+}
+a#account-topbutton {
+    background: none;
+    border: none;
+}
+#login-status a {
+    padding: 0 3px;
+    color: #bbb;
+    text-decoration: none;
+}
+#login-status a:hover {color: #fff;}
+#account-options {
+    width: 140px;
+    margin-top: 4px;
+    text-align: center;
+    border: none;
+    -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0 0 3px rgba(0,0,0,0.4);
+    box-shadow: 0 0 3px rgba(0,0,0,0.4);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+#account-options a {
+	text-shadow: none;
+	color: #888;
+}
+ 
+/*----- SEARCH TOP BOX -----------------------------------------*/
+ 
+#search-top-box {
+    position: absolute;
+    right: 0px;
+    top: 78px;
+    height: 30px;
+    width: 240px;
+    text-align: right;
+}
+#search-top-box-form {
+	height: 30px;
+
+}
+#search-top-box input.text {
+    width: 170px;
+    margin:  0;
+    padding: 7px 25px 7px 5px;
+}
+#search-top-box input.text.empty {
+    color: #666;
+    font-style: italic;
+}
+#search-top-box input.button {
+    position: absolute;
+    top: 2px;
+    right: -5px;
+    border: none;
+    display: block;
+    width: 36px;
+    height: 28px;
+    padding: 0;
+    background: transparent url(http://themes.wdfiles.com/local--files/pink-flower/flower-searchButton.png) no-repeat left center;
+    color: transparent;
+    text-indent: -9999px;
+    font-size: 0;
+    line-height: 0;
+    opacity: 0.7;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+ 
+}
+#search-top-box input.button:hover {
+    opacity: 1;
+}
+ 
+/*----- TOPBAR NAVIGATION ------------------------------------*/
+.nav-mobile {
+	display: none;
+}
+#top-bar {
+    bottom: 0;
+    height: 43px;
+    display: block;
+    left: 0;
+    position: absolute;
+    width: 958px;
+    z-index: 2;
+    border: 1px solid #d5d5d5;
+    background: url(http://themes.wdfiles.com/local--files/hello/hello-topbar-bg.gif) repeat 0 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: rgba(0,0,0,0.1032) 0px 1px 2px;
+	-moz-box-shadow: rgba(0,0,0,0.1032) 0px 1px 2px;
+	box-shadow: rgba(0,0,0,0.1032) 0px 1px 2px;
+}
+#top-bar ul {
+    float: left;
+    padding: 0;
+    height: 43px;
+    margin: 0;
+    border: none;
+}
+#top-bar ul li {
+    display: inline;
+    font-size: 14px;
+    padding: 0; 
+    height: 28px;
+    margin: 0;
+    position: relative;
+ 
+}
+#top-bar ul li:first-child a {
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+}
+#top-bar ul li a {
+    display: block;
+    color: #565656;
+    font-weight: bold;
+    height: 25px;
+    padding: 13px 26px 5px;
+    text-shadow: 0px 1px 1px #fff;
+    border-right: 1px solid #d5d5d5;
+    -webkit-transition: background-color 220ms ease;
+    -moz-transition: background-color 220ms ease;
+}
+#top-bar ul li a.current-link {
+    color: #2191d1;
+}
+#top-bar ul li a:hover,
+#top-bar ul li.sfhover a {
+    background-color: #fff;
+    background-color: rgba(255,254,255,0.85);
+    text-decoration: none;
+}
+#top-bar ul li ul {
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1em;
+    left: 0;
+    line-height: 1.8em;
+    padding: 4px 0;
+    position: absolute;
+    z-index: 100;
+    width: 160px;
+    height: auto;
+    border: none;
+    background: url(http://themes.wdfiles.com/local--files/hello/hello-topbar-ul-bg.gif) repeat;
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+    -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.6);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.6);
+    -webkit-transition: all 400ms ease-out;
+    -moz-transition: all 400ms ease-out;
+}
+#top-bar ul li:hover ul {
+    display: inline-block;
+    opacity: 1;
+}
+#top-bar ul li ul li {
+    padding: 0 10px;
+    background: none;
+    border: none;
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+#top-bar ul li ul li a {
+    background: none;
+    padding: 6px 0;
+    text-transform: none;
+    line-height: 1;
+    height: auto;
+}
+#top-bar ul li.sfhover ul li a,
+#top-bar ul li:hover ul li a {
+    background: none;
+}
+#top-bar ul li ul li a:hover {
+    color: #2191d1;
+}
+#top-bar ul li ul li ul {
+    display: none !important;
+}
+
+/*-------------------------------------------------------------
+   MAIN CONTENT
+---------------------------------------------------------------*/
+ 
+#content-wrap {
+    position: relative;
+    padding: 0;
+    margin-top: 20px;
+    clear: both;
+    overflow: hidden;
+}
+#page-title {
+    border: none;
+    font-size: 26px;
+    font-weight: normal;
+    text-decoration: none;
+    margin: 10px 0 !important;
+    color: #424242;
+    background: url(http://themes.wdfiles.com/local--files/hello/hello-heading-bg.gif) repeat-x 0 bottom;
+    letter-spacing: -1px;
+    padding: 0 0 26px;
+}
+#main-content {
+    float: left;
+    padding: 0;
+    width: 680px;
+    margin: 0;
+    overflow: hidden;
+}
+#page-content {
+    width: 660px;
+    margin: 0 auto;
+}
+ 
+/*----- SIDEBAR -------------------------------------------*/
+ 
+#side-bar{
+    float: right;
+    padding: 10px;
+    width: 220px;
+    margin: 0;
+    overflow: hidden;
+}
+#side-bar a {color: #444;}
+#side-bar a:hover {color: #2191d1;}
+#side-bar ul {
+    list-style-type: none;
+    padding: 0 5px 0;
+}
+ 
+/*----- SIDEBAR ON LEFT -----------------------------------*
+ 
+#page-title {margin-left: 10px;}
+#side-bar {float: left;}
+#main-content {
+    float: right;
+    border-right: none;
+}
+ 
+/*----- NO SIDEBAR ---------------------------------------*
+ 
+#side-bar {display: none;}
+#main-content {
+    width: 100%;
+}
+#page-content {width: 97%;}
+ 
+/*----- BREADCRUMBS -------------------------------------------*/
+ 
+#breadcrumbs {
+    color: #666;
+    padding: 5px 10px;
+    width: 95%;
+    margin: 15px 5px;
+    font-size: 11px;
+    background: url(http://themes.wdfiles.com/local--files/hello/hello-breadcrumb-bg.gif) repeat 0 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 0 2px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0 0 2px rgba(0,0,0,0.15);
+    box-shadow: 0 0 2px rgba(0,0,0,0.15);
+}
+#breadcrumbs a {color: #666;}
+#breadcrumbs a:hover {color: #2191d1;}
+ 
+/*-------------------------------------------------------------
+   FOOTER
+---------------------------------------------------------------*/
+#page-options-container {padding-bottom: 5px;}
+#footer {
+    color: #bbb;
+    padding: 12px 10px 0;
+    font-size: 0.95em;
+    margin-top: 35px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.75);
+    position: relative;
+    overflow: visible;
+}
+#footer .options {font-size: 100%;}
+#footer a, #license-area a {
+    color: #bbb;
+    text-decoration: none;
+}
+#footer a:hover, #license-area a:hover {color: #2191d1;}
+#license-area {
+    padding: 15px 10px 20px;
+    color: #ddd;
+    font-size: 0.95em;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.75);
+}
+#extra-div-1 {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100px; /* If you use a custom footer, change this value */
+	background: url(http://themes.wdfiles.com/local--files/hello/hello-footer-bg.gif) repeat;
+	bottom: 0;
+	z-index: -1;
+} 
+#extra-div-1::before {
+	content: '';
+	position: absolute;
+	display: block;
+	height: 10px;
+	top: -12px;
+	left: 0;
+	right: 0;
+	background: url(http://themes.wdfiles.com/local--files/hello/hello-footer-border.gif) repeat;
+}
+/*-------------------------------------------------------------
+   WIKI ELEMENTS
+---------------------------------------------------------------*/
+#action-area {padding: 0 3px;}
+#action-area h1 {font-size: 200%;}
+.code {
+	background: #fff;
+    display: block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+blockquote {
+    background: url(http://themes.wdfiles.com/local--files/hello/hello-quote.png) no-repeat 0 0;
+    border: none;
+    color: #555;
+    font-family: Georgia, “Times New Roman”, Times, serif;
+    font-style: italic;
+    min-height: 30px;
+    padding: 0 45px;
+    margin: 0 40px 25px 40px;
+}
+ 
+/*----- INBUILT HOVERTIPS -------------------------------------*/
+.hovertip {
+    border: none !important;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    max-width: 300px;
+    background: none;
+}
+.hovertip .content {
+	background-color: #333;
+    background-color: rgba(20,20,20,0.83617);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 4px 8px;    
+    color: #fff;
+}
+.hovertip .content .footnote .f-content {
+    margin: 2px;
+}
+.hovertip .content .footnote .f-heading, .hovertip .content .footnote .f-footer  {
+    display: none !important;
+}
+ 
+/*----- COMMENTS ----------------------------------------------*/
+ 
+.comments-box {
+    border-top: 2px solid #eee;
+    margin: 10px 0;
+}
+.comments-box h1 {
+    color: #444;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.change-textarea-size {
+	padding-right: 50px;
+}
+.change-textarea-size a {
+	background: #fff;
+	border: 1px solid #d4d4d4;
+	-webkit-border-radius: 0 0 3px 3px;
+	-moz-border-radius: 0 0 3px 3px;
+	border-radius: 0 0 3px 3px;
+}
+.change-textarea-size a:hover {
+	background: #eee;
+}
+.post-container {
+    background: #fefefe;
+    padding: 0 10px;
+    position: relative;
+    margin: 15px 0;
+    border: 1px solid #bbb;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.post-container .post {
+    margin: 0;
+    padding: 5px 0 2px;
+}
+.post-container .post.folded .short {background: none;}
+.post-container .head .info, .post-container .head {
+    margin: 0;
+    background: none !important;
+    border: none;
+    text-transform: none;
+}
+.post-container .head .info .printuser a {
+    color: #2191d1;
+    text-transform: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+.post-container .head .info .printuser a:hover {
+    background: none;
+    color: #444;
+}
+.post-container .head .info .odate {
+    float: right;
+    color: #777;
+    font-size: 12px;
+}
+.post-container .head .options{display: none;}
+.post-container .options {
+    margin: 5px 0 0;
+    padding: 5px 0 0;
+}
+.post-container .post .options a {
+    color: #444;
+    padding: 4px 0 0;
+    text-decoration: none;
+    font-size: 12px;
+}
+.post-container .post .options a:hover {color: #2191d1;}
+ 
+/*----- BUTTONS ----------------------------------------------*/
+ 
+div.buttons input, input.button, button, file, a.button, 
+.button-bar a, #new-post-button, .rate-points, .rateup a, 
+.ratedown a, .cancel a, .pager a, .pager .current, div.new-post a, 
+.owindow .button-bar a {
+    height: auto;
+    padding: 6px 10px;
+    font: bold 13px Arial, sans-serif;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: url(http://themes.wdfiles.com/local--files/hello/hello-button-bg.gif) repeat-x;
+    border: 1px solid #d4d4d4;
+    color: #616161;
+    margin: 0 5px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+div.buttons input:hover, input.button:hover, button:hover, 
+file:hover, a.button:hover, .button-bar a:hover, #new-post-button:hover, 
+.rateup a:hover, .ratedown a:hover, .cancel a:hover, .pager a:hover, 
+div.new-post a:hover, .owindow .button-bar a:hover {
+    color: #515151;
+    background: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+.page-rate-widget-box .rate-points, .pager .current {
+    color: #555;
+    padding: 4px 6px;
+    font-size: 1.1em; 
+    border: 1px solid #d4d4d4;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;      
+}
+.pager a, .pager a:hover, .pager .current, .page-rate-widget-box a {
+    padding: 3px 8px;
+}
+.pager .current {
+	border: 1px solid #2191d1;
+}
+/*----- OWINDOWS ----------------------------------------------*/
+.owindow {
+	border: none;
+	padding: 5px 10px 10px;
+	background-color: rgba(20,20,20,0.7);
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+	-moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+.owindow .title {
+	background: none;
+	padding: 5px 20px 15px;
+	border: none;
+	color: #bcbcbc;
+	text-shadow: 0 1px 1px #222;
+}
+.owindow .content {
+	background: #f8f8f8;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+.owindow.owait, .owindow.osuccess {background-color: #fbfbfb;}
+.owindow h1 {font-size: 1.6em;}
+.owindow .button-bar {padding-right: 0;}
+.owindow .button-bar a {outline: none;}
+
+/* MOBILE */
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	body {
+		width: 100%;
+	}
+	
+	#container-wrap {
+	    margin: 0 auto;
+	    width: 100%; 
+	}
+	
+	#header {
+		height: auto;
+		padding: 60px 10px 0;
+	}
+	#header h1 a {
+		font-size: 34px;
+	}
+	#header h1,
+	#header h2 {
+		position: static;
+		margin: 5px 0 0;
+	}
+	#search-top-box { 
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		margin: 10px 0;
+	}
+	.nav-mobile {
+		display: block;
+	}
+	.nav-main {
+		display: none;
+	}
+	#top-bar {
+		position: static;
+		width: auto;
+		height: auto;
+		margin: 0 0 20px;
+	}
+	#top-bar * {
+		-webkit-transition: none !important;
+		-moz-transition: none !important;
+		transition: none !important;
+	}
+	#top-bar ul {
+		float: none;
+		height: auto;
+	}
+	#top-bar ul li {
+		display: block;
+		float: none;
+		height: auto;
+	}
+	#top-bar ul li a {
+		text-align: left;
+		border-right: none;
+		padding: 13px 20px 5px;
+	}
+	#top-bar ul li > ul,
+	#top-bar ul li:hover ul {
+		display: none;
+	}
+	#top-bar .nav-mobile > ul > li.sfhover > a {
+		background: transparent;
+		display: none;
+	}
+	#top-bar ul > li.sfhover ul {
+		display: block;
+		visibility: visible;
+		opacity: 1;
+		position: relative;
+		top: 0;
+		left: 0;
+		padding: 0;
+		margin: 0;
+		background: none;
+		border: none;
+		box-shadow: none;
+		width: 100%;
+	}
+	#top-bar ul > li.sfhover ul li {
+		background: none;
+		border: none;
+		box-shadow: none;
+		height: 28px;
+		padding: 5px 20px;
+		width: 100%;
+		margin: 0 0 5px;
+	}
+	#top-bar ul > li.sfhover li a {
+		visibility: visible;
+		line-height: 20px;
+		display: block;
+		width: auto;
+	}
+	#main-content {
+	    float: none;
+	    padding: 0 10px;
+	    width: auto;
+	}
+	#page-content {
+	    width: 100%;
+	}	 
+	#side-bar {
+	    float: none;
+	    padding: 10px;
+	    width: 100%;
+	}
+	
+	#footer {
+		background: url(http://themes.wdfiles.com/local--files/hello/hello-footer-bg.gif)  repeat 0 0;
+		text-align: center;
+	}
+	#footer::before {
+		content: '';
+		position: absolute;
+		display: block;
+		height: 10px;
+		top: -10px;
+		left: 0;
+		right: 0;
+		background: url(http://themes.wdfiles.com/local--files/hello/hello-footer-border.gif) repeat;
+	}
+	
+}
+
+#main-content {
+width:960px;
+}
+
+#page-content {
+width:940px;
+}
