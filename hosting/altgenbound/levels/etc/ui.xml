@@ -22,6 +22,7 @@
 	<asset name='helpControl' type='graphic'>interface/helpControl.png</asset>
 
   <asset name='dialogBox' type='graphic'>interface/boxes/dialogBoxBig.png</asset>
+	<asset name='twitterBox' type='graphic'>interface/boxes/alttextbox_twitter.png</asset>
   <asset name='closeButtonSheet' type='graphic'>interface/closeconversation.png</asset>
   
 </assets>

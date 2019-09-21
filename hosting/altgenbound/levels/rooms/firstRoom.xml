@@ -5,7 +5,8 @@ is entered for the first time. -->
 <sburb description="first room">
 
 <dependencies>
-	<dependency>chars/meenah.xml</dependency> <!-- loading in everything meenah entails -->
+	<dependency>chars/dickle.xml</dependency>
+	<dependency>chars/vrachne.xml</dependency>
 	<dependency>chars/karkat.xml</dependency> <!-- and karkat -->
 </dependencies>
 
@@ -84,18 +85,18 @@ safe than sorry.-->
   	internal tags that may have been part of the class. Template classes
   	are a great way to seperate logic and content, as well as recycle common
   	patterns. -->
-  	<character class='meenah' x='500' y='500'>
-  		<action class='beMeenah'/>
+  	<character class='dickle' x='500' y='500'>
+  		<action class='beDickle'/>
   	</character>
   
   	<character class='karkat' x='420' y='500'>
   		<action class='beKarkat'/>
   		<action command='talk' name='Talk.'>
   			<args>
-  				@meenah_talk Hey what're you doing in my sample. 
-  				@meenah_angrytalk This is my sample I swear to god I will fight you. Get out. Get ouuuuuut.
+  				@dickle_talk Hey what're you doing in my sample. 
+  				@dickle_talk This is my sample I swear to god I will fight you. Get out. Get ouuuuuut.
   				@karkat_talk what
-  				@meenah_annoyed ouuuuuuut
+  				@dickle_talk%twitterBox ouuuuuuut
   			</args>
   		</action>
   	</character>
@@ -109,12 +110,12 @@ safe than sorry.-->
 					<args>
 						<action command='talk' name='Yes.'>
 							<args>
-								@meenah_talk Yes.
+								@dickle_talk Yes.
 							</args>
 						</action>
 						<action command='talk' name='No.'>
 							<args>
-								@meenah_talk No.
+								@dickle_talk No.
 							</args>
 						</action>
 					</args>
@@ -122,23 +123,97 @@ safe than sorry.-->
 			</action>
 		</character>
   	
-  	<character class='karkat' name='karkat2' x='620' y='450'>
-  		<action command='follow' sprite='meenah' name='Follow.'>
-  			<args>karkat2,meenah</args>
+  	<character class='vrachne' name='vrachne' x='620' y='450'>
+  		<action command='follow' sprite='dickle' name='Follow.'>
+  			<args>vrachne,dickle</args>
   			<action command='removeAction' noDelay='true'>
-  				<args>karkat2,Follow.</args>
+  				<args>vrachne,Follow.</args>
   			</action>
   		</action>
+			<action command="talk" name="Talk.">
+				<args>
+					@dickle_talk hey vrachne can i ask you about some stuff real quick
+					@vrachne_talk is this about your quest again? Its really simple dickle i don’t know how you cant get it into that tiny head of yours
+					@dickle_talk no no it’s a question about you!
+					@vrachne_talk oh really now? Well go ahead then what do you wanna know about little ole me
+				</args>
+				<action command="presentAction">
+					<args>
+						<action command="talk" name="What's being a sprite like?">
+							<args>
+								@dickle_talk welllll its a pretty broad question but like, what’s being a sprite like?
+								@vrachne_talk what kind of question is that.
+								@dickle_talk i don’t know! Im trying my hardest here, i mean you’re like a kinda ghost kinda goo person so i’m just really curious about some stuff!
+								@vrachne_talk like what
+								@dickle_talk like uhhh do you have to eat! Or sleep ya know stuff like that!
+								@vrachne_talk i’ll sleep when im dead dickle and as for me having to eat
+								@vrachne_talk i don’t think im “supposed” to feel hunger but you never know how things will work out
+								@vrachne_talk things are pretty shoddy here if you couldn’t tell that already.
+								@dickle_talk huh?
+								@vrachne_talk this entire time we haven’t even run into a single underling! none. nada. ゼロ.
+								@vrachne_talk isn’t that a little weird to you?
+								@dickle_talk well i mean i just assumed we’d been really lucky so far! 
+								@dickle_talk honestly i’m kinda scared of what ya know enemies and stuff we’d run into yeah?
+								@dickle_talk because they like take after the first things we throw into the sprite thing right?
+								@vrachne_talk they’re called underlings dickle and yes they do take after whatever people throw into their kernelsprites
+								@vrachne_talk what, are you scared of getting assaulted by a long tongued poorly drawn imp? honestly the porn sword would probably scare them off or leave them too embarrassed to even fight properly HA
+								@dickle_talk it’s not that! i’m just scared of what the others are gonna put in when they get in ya know?
+								@vrachne_talk listen dickle i doubt they’ll put in anything TOO bad. If you think the worst possible thing is gonna happen every time you or someone else does something then you’ll never get anywhere
+								@dickle_talk yeah i guess
+								@dickle_talk thanks for the life advice vrachne
+								@vrachne_talk it’s on the house, this time.
+							</args>
+						</action>
+						<action command="talk" name="Do you remember anything from your like parts?">
+							<args>
+								@dickle_talk do you have memories from like the parts that make you up? You know what i mean by that right
+								@vrachne_talk my memories are a big puddle of mush dickle, there’s some stuff that’s clear and some stuff that isn’t
+								@dickle_talk do you remember fighting any big green bad guys or maybe some weird purple haired hero and his weird snake lover person
+								@vrachne_talk yeah i do, i wouldn’t forget those fights not by a long shot.
+								@dickle_talk if you don’t mind me asking did you win those fights?
+								@vrachne_talk unfortunately i don’t remember how they ended just that i got into those fights.
+								@dickle_talk awwww that sucks
+								@vrachne_talk knowing me though i probably came out on top!
+								@vrachne_talk i’d never lose to an overgrown time traveling child or some wannabe hero and his pet snake!
+								@dickle_talk but uhhh what if you did?
+								@vrachne_talk are you doubting me dickle?
+								@dickle_talk no no it’s just that since you can’t really remember we cant know for sure right?
+								@vrachne_talk well dickle, even if i did die, it didn’t “stick”
+								@vrachne_talk it never does, i’ll always find a way back thats why im here, it’s one of those talents i told you about
+								@dickle_talk that’s a pretty busted talent vrachne
+								@vrachne_talk i suppose it is but i’m not complaining
+								@dickle_talk yeahh i guess i shouldn’t be complaining about it either
+								@dickle_talk anyway if you do remember could you tell me? I’m real curious!
+								@vrachne_talk sure, you’ll be the first to know dickle.
+								@dickle_talk sweeeeeet!
+							</args>
+						</action>
+						<action command="talk" name="What's your favorite food?">
+							<args>
+								@dickle_talk whats your favorite food?
+								@vrachne_talk didn’t i tell you i don’t have to eat? Or shouldn’t have to anyway
+								@dickle_talk yeah but not having to eat doesn’t mean you can’t eat stuff! You can eat for fun you know i do it all the time
+								@vrachne_talk well i guess that explains your figure heh
+								@dickle_talk hey i’m trying my hardest to lose it okay! I just really haven’t gotten out of the house much before i got into this mess
+								@vrachne_talk you’re not fooling anyone dickle
+								@vrachne_talk anyway, if i had to name a favorite food hmmmmm…. ham is pretty nice
+								@dickle_talk ham? really?
+								@vrachne_talk yes dickle, ham. whats wrong with liking ham?
+								@dickle_talk oh nothing! honestly i love a good ham sandwich especially if its like honey ham or something like that!
+								@dickle_talk any other foods you like a lot?
+								@vrachne_talk well there is something i really REALLY like, though it’s a bit out there.
+								@dickle_talk you know on second thought you don’t have to answer that!
+								@dickle_talk i have a lot of ham back at home, maybe once we’re done here we can go back and eat some sandwiches or something yeah?
+								@dickle_talk a lunch break is always important! People might say breakfast is the most important meal of the day but they just say that to make people wake up earlier and buy cereal boxes!
+								@dickle_talk its a conspiracy i tell you!
+								@vrachne_talk whatever you say dickle.
+							</args>
+						</action>
+					</args>
+				</action>
+			</action>
   	</character>
   	
-  	<character class='karkat' name='karkat3' x='620' y='650'>
-  		<action command='follow' sprite='meenah' name='Follow.'>
-  			<args>karkat3,meenah</args>
-  			<action command='removeAction' noDelay='true'>
-  				<args>karkat3,Follow.</args>
-  			</action>
-  		</action>
-  	</character>
   	<!-- here we're adding a standard chest based on a template class found in
   	etc/standardTemplates.xml -->
   	<sprite class='chest1' name='chest1' x='166' y='498'>

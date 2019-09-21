@@ -24,7 +24,7 @@ levelPath and resourcePath specify where all resource and level path specificati
 should be relative to.-->
 
 <sburb name="altgenbound" version="1.0" description="Altgenbound"
-	char='meenah' bgm='meenahSong' scale='2' 
+	char='dickle' bgm='dickleSong' scale='2' 
 	levelPath='levels' resourcePath='resources'>
 
 	<!-- We generally don't have any actual content in here. We just load in

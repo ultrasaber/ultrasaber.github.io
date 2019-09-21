@@ -1,0 +1,31 @@
+<sburb description='vrachne'>
+
+<classes>
+	<animation class='vrachne-dialog' frameInterval='6' x='-180' y='-524'/>
+	
+	<character class='vrachne' name='vrachne' sx='-50' sy='-115' sWidth='100' sHeight='130' width='35' height='25' sheet='vrachneSheet' state='walkFront' facing='Front'></character>
+	
+	<action class='bevrachne' name='Be Vrachnesprite.' command='macro'>
+		<args>
+			<action command='changeChar' noDelay='true'>
+				<args>vrachne</args>
+				<action command='playSong' noDelay='true'>
+					<args>vrachneSong,0</args>
+				</action>
+			</action>
+		</args>
+	</action>
+</classes>
+
+<assets>
+	<asset name='vrachneSheet' type='graphic'>chars/meenah/meenah.png</asset>
+	<asset name='vrachneSong' type='audio'>audio/music/muscles.oga;audio/music/muscles.mp3</asset>
+	<asset name='vrachne_talk' type='graphic'>dialogs/meenah/meenah_talk.png</asset>
+</assets>
+
+<hud>
+	<dialogsprites>	
+  		<animation name='vrachne_talk' class='vrachne-dialog' sheet='vrachne_talk' length='2'/>
+  </dialogsprites>
+</hud>
+</sburb>
