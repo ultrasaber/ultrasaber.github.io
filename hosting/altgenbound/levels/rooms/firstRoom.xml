@@ -124,23 +124,28 @@ safe than sorry.-->
 		</character>
   	
   	<character class='vrachne' name='vrachne' x='620' y='450'>
+			<action class="beVrachne"/>
   		<action command='follow' sprite='dickle' name='Follow.'>
   			<args>vrachne,dickle</args>
   			<action command='removeAction' noDelay='true'>
   				<args>vrachne,Follow.</args>
   			</action>
   		</action>
-			<action command="talk" name="Talk.">
+			<action command='unfollow' sprite='dickle' name='Stop following.'>
+				<args>vrachne</args>
+			</action>
+			<action command="talk" name="Ask a question.">
 				<args>
-					@dickle_talk hey vrachne can i ask you about some stuff real quick
-					@vrachne_talk is this about your quest again? Its really simple dickle i don’t know how you cant get it into that tiny head of yours
-					@dickle_talk no no it’s a question about you!
-					@vrachne_talk oh really now? Well go ahead then what do you wanna know about little ole me
+					@dickle_talk what should i ask about?
 				</args>
 				<action command="presentAction">
 					<args>
 						<action command="talk" name="What's being a sprite like?">
 							<args>
+								@dickle_talk hey vrachne can i ask you about some stuff real quick
+								@vrachne_talk is this about your quest again? Its really simple dickle i don’t know how you cant get it into that tiny head of yours
+								@dickle_talk no no it’s a question about you!
+								@vrachne_talk oh really now? Well go ahead then what do you wanna know about little ole me
 								@dickle_talk welllll its a pretty broad question but like, what’s being a sprite like?
 								@vrachne_talk what kind of question is that.
 								@dickle_talk i don’t know! Im trying my hardest here, i mean you’re like a kinda ghost kinda goo person so i’m just really curious about some stuff!
@@ -162,10 +167,15 @@ safe than sorry.-->
 								@dickle_talk yeah i guess
 								@dickle_talk thanks for the life advice vrachne
 								@vrachne_talk it’s on the house, this time.
+								@vrachne_talk anyway is there anything else you wanted to ask or can we finally get out of this stupid tree maze hellhole?
 							</args>
 						</action>
 						<action command="talk" name="Do you remember anything from your like parts?">
 							<args>
+								@dickle_talk oh actually i have another question
+								@dickle_talk it’s uh more personal this time if thats okay with you
+								@vrachne_talk ask away dickle i’m an open book
+								@dickle_talk well uh 
 								@dickle_talk do you have memories from like the parts that make you up? You know what i mean by that right
 								@vrachne_talk my memories are a big puddle of mush dickle, there’s some stuff that’s clear and some stuff that isn’t
 								@dickle_talk do you remember fighting any big green bad guys or maybe some weird purple haired hero and his weird snake lover person
@@ -190,6 +200,8 @@ safe than sorry.-->
 						</action>
 						<action command="talk" name="What's your favorite food?">
 							<args>
+								@dickle_talk hey vrachne?
+								@vrachne_talk what.
 								@dickle_talk whats your favorite food?
 								@vrachne_talk didn’t i tell you i don’t have to eat? Or shouldn’t have to anyway
 								@dickle_talk yeah but not having to eat doesn’t mean you can’t eat stuff! You can eat for fun you know i do it all the time

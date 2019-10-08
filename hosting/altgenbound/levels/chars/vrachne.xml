@@ -3,9 +3,9 @@
 <classes>
 	<animation class='vrachne-dialog' frameInterval='6' x='-180' y='-524'/>
 	
-	<character class='vrachne' name='vrachne' sx='-50' sy='-115' sWidth='100' sHeight='130' width='35' height='25' sheet='vrachneSheet' state='walkFront' facing='Front'></character>
+	<character class='vrachne' name='vrachne' sx='-29' sy='-48' sWidth='58' sHeight='96' width='30' height='30' sheet='vrachneSheet' state='walkFront' facing='Front'></character>
 	
-	<action class='bevrachne' name='Be Vrachnesprite.' command='macro'>
+	<action class='beVrachne' name='Be Vrachnesprite.' command='macro'>
 		<args>
 			<action command='changeChar' noDelay='true'>
 				<args>vrachne</args>
@@ -18,8 +18,8 @@
 </classes>
 
 <assets>
-	<asset name='vrachneSheet' type='graphic'>chars/meenah/meenah.png</asset>
-	<asset name='vrachneSong' type='audio'>audio/music/muscles.oga;audio/music/muscles.mp3</asset>
+	<asset name='vrachneSheet' type='graphic'>chars/vrachne/vrachne.png</asset>
+	<asset name='vrachneSong' type='audio'>audio/music/grudge.mp3</asset>
 	<asset name='vrachne_talk' type='graphic'>dialogs/meenah/meenah_talk.png</asset>
 </assets>
 

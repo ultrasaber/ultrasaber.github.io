@@ -3,7 +3,7 @@
 <classes>
 	<animation class='dickle-dialog' frameInterval='6' x='-180' y='-524'/>
 	
-	<character class='dickle' name='dickle' sx='-50' sy='-115' sWidth='100' sHeight='130' width='35' height='25' sheet='dickleSheet' state='walkFront' facing='Front'></character>
+	<character class='dickle' name='dickle' sx='-29' sy='-48' sWidth='58' sHeight='96' width='30' height='30' sheet='dickleSheet' state='walkFront' facing='Front'></character>
 	
 	<action class='beDickle' name='Be Dickle.' command='macro'>
 		<args>
@@ -18,8 +18,8 @@
 </classes>
 
 <assets>
-	<asset name='dickleSheet' type='graphic'>chars/karkat/karkat.png</asset>
-	<asset name='dickleSong' type='audio'>audio/music/muscles.oga;audio/music/muscles.mp3</asset>
+	<asset name='dickleSheet' type='graphic'>chars/dickle/dickle.png</asset>
+	<asset name='dickleSong' type='audio'>audio/music/grudge.mp3</asset>
 	<asset name='dickle_talk' type='graphic'>dialogs/karkat/karkat_talk.png</asset>
 </assets>
 
