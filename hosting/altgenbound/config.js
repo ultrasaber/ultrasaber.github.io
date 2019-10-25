@@ -1,6 +1,8 @@
 // Configs!
 
 var SburbConfig = {
+  "characterSpeed": 8,
+
   "chooserFill1": "#7289DA",
   "chooserFill2": "#7289DA",
   "chooserFill3": "#23272A",

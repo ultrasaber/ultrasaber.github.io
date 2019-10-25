@@ -49,8 +49,8 @@ is entered for the first time. -->
 	<asset name='firstRoomFG_3_2' type='graphic'>backgrounds/slices/firstRoomFG_3_2.png</asset>
 	-->
 
-	<asset name='firstRoomFG' type='graphic'>backgrounds/forest/foreground.png</asset>
-	<asset name='firstRoomBG' type='graphic'>backgrounds/forest/background.png</asset>
+	<asset name='firstRoomFG' type='graphic'>backgrounds/forest/foreground-2x.png</asset>
+	<asset name='firstRoomBG' type='graphic'>backgrounds/forest/background-2x.png</asset>
 	
 	<!-- The map is a special black-and-white image describing walkable areas in
 	a room. White pixels are walkable, black are unwalkable. This actually consumes
@@ -86,7 +86,7 @@ safe than sorry.-->
 	camera can see. However width and height can be explicitly
 	specified here if need be. The walkableMap is theoretically optional, but
 	it's incredibly useful and easy to use. -->
-  <room name='firstRoom' walkableMap='firstRoomMap' mapScale='1'>
+  <room name='firstRoom' walkableMap='firstRoomMap' mapScale='2'>
   
   	<!-- here we drop in our character. Since we specified everything in 
   	chars/meenah.xml, we don't have to do much here. We just need to specify
@@ -95,11 +95,11 @@ safe than sorry.-->
   	internal tags that may have been part of the class. Template classes
   	are a great way to seperate logic and content, as well as recycle common
   	patterns. -->
-  	<character class='dickle' x='346' y='1028'>
+  	<character class='dickle' x='692' y='2056'>
   		<action class='beDickle'/>
   	</character>
   
-  	<character class='karkat' x='335' y='913'>
+  	<character class='karkat' x='670' y='1826'>
   		<action class='beKarkat'/>
   		<action command='talk' name='Talk.'>
   			<args>
@@ -115,7 +115,7 @@ safe than sorry.-->
   		</action>
   	</character>
 
-		<character class='karkat' name='dialogueTest' x='300' y='1010'>
+		<character class='karkat' name='dialogueTest' x='600' y='2020'>
 			<action command='talk' name='Dialogue test.'>
 				<args>
 					@karkat_talk This is a dialogue test.
@@ -137,7 +137,7 @@ safe than sorry.-->
 			</action>
 		</character>
   	
-  	<character class='vrachne' name='vrachne' x='512' y='1019'>
+  	<character class='vrachne' name='vrachne' x='1024' y='2038'>
 			<action class="beVrachne"/>
   		<action command='follow' sprite='dickle' name='Follow.'>
   			<args>vrachne,dickle</args>
@@ -243,7 +243,7 @@ safe than sorry.-->
   	<!-- here we're adding a standard chest based on a template class found in
   	etc/standardTemplates.xml -->
 
-  	<sprite class='chest1' name='chest1' x='200' y='1367'>
+  	<sprite class='chest1' name='chest1' x='400' y='2734'>
 			<action command='openChest' name='Open.'>
 				<args>
 					chest1,item1, @! You got a CAN OF TAB!
