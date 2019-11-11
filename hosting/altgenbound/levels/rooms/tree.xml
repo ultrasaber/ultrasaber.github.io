@@ -1,0 +1,27 @@
+<sburb description="tree">
+  <dependencies>
+  </dependencies>
+  <assets>
+    <asset name="treeFG" type="graphic">backgrounds/tree/foreground.png</asset>
+    <asset name="treeBG" type="graphic">backgrounds/tree/background.png</asset>
+    <asset name="treeMap" type="graphic">backgrounds/tree/collision-map.png</asset>
+  </assets>
+  <rooms>
+    <room name="tree" walkableMap="treeMap" mapScale="2">
+      <sprite name="treeFG" depthing="2">
+        <animation sheet="treeFG" />
+      </sprite>
+      <sprite name="treeBG">
+        <animation sheet="treeBG" />
+      </sprite>
+
+      <character class='karkat' name='dialogueTest' x='241' y='745'>
+        <action command="changeRoom" name="Move.">
+          <args>
+            firstRoom,692,2056
+          </args>
+        </action>
+      </character>
+    </room>
+  </rooms>
+</sburb>
